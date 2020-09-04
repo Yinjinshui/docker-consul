@@ -1,0 +1,13 @@
+centos 系统下
+
+1.创建镜像
+
+	创建Dockerfile文件
+	构建镜像：docker build -t consul1.4 .
+
+
+2.创建容器
+	docker run -d -p 8500:8500 --name=consul1 consul agent -server -bootstrap -ui -client='0.0.0.0'
+
+
+
