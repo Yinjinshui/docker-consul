@@ -7,7 +7,14 @@ centos 系统下
 
 
 2.创建容器
-	docker run -d -p 8500:8500 --name=consul1 consul1.4 
+	[root@localhost ~]# docker run -itd -p 9500:8500 --name=consul-test  consul1.4
+	bcf922120946a85ae7473cb0e340e704d72b70d63c4ec21e71dbec5866e372c5
+	
+	[root@localhost ~]# docker ps -a
+	CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                   NAMES
+	bcf922120946        consul1.4           "/bin/sh"                3 seconds ago       Up 2 seconds        8300-8302/tcp, 0.0.0.0:9500->8500/tcp   consul-test
 
 
-
+3.编排方式执行
+        进入docker-compose.yaml所在文件目录
+	[root@localhost ~]# docker-compose up -d
