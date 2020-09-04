@@ -7,7 +7,7 @@ centos 系统下
 
 
 2.创建容器
-	docker run -d -p 8500:8500 --name=consul1 consul agent -server -bootstrap -ui -client='0.0.0.0'
+	docker run -d -p 8500:8500 --name=consul1 consul1.4 
 
 
 
